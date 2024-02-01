@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <title>Cantina</title>
 </head>
 <body>
@@ -17,8 +17,8 @@
     <main>
         <form action="http://localhost:3000/produtos" method="post">
             <input type="text" name="nome" placeholder="Nome do Produto" required>
-            <input type="text" name="preco" placeholder="Preço do produto" required>
-            <input type="text" name="quantidade" placeholder="Quantidade no estoque" required>
+            <input type="number" step="0.01" name="preco" placeholder="Preço do produto" required>
+            <input type="number" name="quantidade" placeholder="Quantidade no estoque" required>
             <input type="submit" value="Enviar">
         </form>
     </main>

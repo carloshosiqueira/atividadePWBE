@@ -23,7 +23,7 @@ const create = (req, res) => {
         if(err)
             res.redirect("http://localhost:5500/front/erro.html?erro=Provavelmente o Produto ja está cadastrado&err="+err.code);
         if(result)
-            res.redirect("http://localhost:5500/front/index.hmtl");
+            res.redirect("http://localhost:5500/front/index.html");
     });
 }
 
