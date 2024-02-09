@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style3.css">
     <title>Cantina</title>
 </head>
+
 <body>
     <header>
         <h1>Listar todos os produtos</h1>
     </header>
     <nav>
-        <a href="./index.html">Listar todos</a>
+        <a href="./index.html">Listar todos os produtos</a>
         <a href="./cadastro.html">Cadastrar</a>
     </nav>
     <main>
@@ -22,6 +24,7 @@
                     <th>Produto</th>
                     <th>Preço</th>
                     <th>Quantidade</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody id="dados">
@@ -42,9 +45,25 @@
                         <td>${prod.nome}</td>
                         <td>R$ ${prod.preco.toFixed(2)}</td>
                         <td>${prod.quantidade} Unidades</td>
+                        <td>
+                            <button onclick='del(${prod.id})'>[ - ]</button>
+                            <button onclick='window.location.href="./update.html?id=${prod.id}&nome=${prod.nome}&preco=${prod.preco}&quantidade=${prod.quantidade}"'>
+                                [ * ]
+                            </button>
+                        </td>  
                     </tr>
                 `;
             });
         });
+
+        function del(id){
+            fetch(`http://localhost:3000/produtos/${id}`, {method: 'DELETE'})
+            .then(res => res.json())
+            .then(res => {
+                window.location.reload();
+            });
+        }
+
 </script>
+
 </html>

@@ -41,7 +41,7 @@ const update = (req,res) => {
     let nome = req.body.nome;
     let preco = req.body.preco;
     let quantidade = req.body.quantidade;
-    let query = `UPDATE produtos SET nome = '${nome}', ${preco}, ${quantidade} WHERE id = ${id};`;
+    let query = `UPDATE produtos SET nome = '${nome}', '${preco}', '${quantidade}' WHERE id = ${id};`;
     con.query(query, (err, result) => {
         if (err)
             res.redirect("http://localhost:5500/front/erro.html?erro=Erro ao atualizar&err=" + err.code); 
