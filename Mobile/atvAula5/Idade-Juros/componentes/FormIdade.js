@@ -30,6 +30,10 @@ export default function FormIdade() {
 
     // Define o estado 'idadeResult' com a idade calculada
     setIdadeResult(idadeCalculada.toString());
+
+    if(mes > 12){
+      alert('Mês invalido, coloque um mês entre 1 e 12');
+    }
   };
 
   return (
