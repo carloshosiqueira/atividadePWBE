@@ -11,19 +11,19 @@ export default function FormIdade() {
   const calcIdade = () => {
     const hoje = new Date();
     const diaAtual = hoje.getDate();
-    const mesAtual = hoje.getMonth();
+    const mesAtual = hoje.getMonth() + 1;
     const anoAtual = hoje.getFullYear();
 
-    console.log(hoje, diaAtual, mesAtual, anoAtual)
     
     const diaNascimento = parseInt(dia, 10);
     const mesNascimento = parseInt(mes, 10);
     const anoNascimento = parseInt(ano, 10);
+    
+    console.log(hoje, dia, mes, ano)
 
-    // Calcula a idade subtraindo o ano de nascimento do ano atual
+
     let idadeCalculada = anoAtual - anoNascimento;
 
-    // Se o mês atual for menor que o mês de nascimento OU se for o mesmo mês, mas o dia atual for menor que o dia de nascimento, subtrai 1 da idade
     if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
       idadeCalculada--;
     }

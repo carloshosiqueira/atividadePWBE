@@ -14,13 +14,17 @@ import {
 
         const users = [
             {
-              username: 'user',
-              pass: '123456',
-            },
-            {
-              username: 'usuario',
+              username: 'pessoa1',
               pass: '123',
             },
+            {
+              username: 'pessoa2',
+              pass: '456',
+            },
+            {
+              username: 'pessoa3',
+              pass: '789',
+            }
           ];
           
           export default function LoginForm({ navigation }) {

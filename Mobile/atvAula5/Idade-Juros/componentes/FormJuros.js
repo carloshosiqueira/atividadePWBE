@@ -1,48 +1,51 @@
 import {View, StyleSheet, Text, TextInput, TouchableOpacity} from 'react-native';
 import React from 'react';
 import MaskInput from 'react-native-mask-input';
+import react from 'react';
 
 export default function FormIMC(){
-    const [peso, setPeso] = React.useState('');
-    const [altura, setAltura] = React.useState('');
-    const [imc, setIMC] = React.useState('');
+    const [valor, setValor] = React.useState('');
+    const [taxa, setTaxa] = React.useState('');
+    const [juros, setJuros] = React.useState('');
 
-    const calcIMC = () => {
-        const numberPeso = Number(peso);
-        const numberAltura = Number(altura);
-        setIMC ((numberPeso/(numberAltura ** 2)).toFixed(2))
+    const calcJuros = () => {
+        const valorNumber = Number(valor); 
+    const taxaNumber = Number(taxa);
+    const jurosCalculado = (valorNumber + (valorNumber * taxaNumber / 100));
+    setJuros(jurosCalculado);
+    console.log(valorNumber, taxaNumber, jurosCalculado);
     }
 
     return (
         <>
             <View style={styles.container}>
                 <View style={styles.content}>
-                    <Text>Calculadora de IMC</Text>
+                    <Text>Calculadora de Juros</Text>
 
                     <MaskInput
-                        mask={[/\d/, /\d/, /\d/, '.', /\d/]}
+                        mask={[/\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
                         style={styles.textInput}
-                        onChangeText={(masked, unmasked) => setPeso(masked)}
-                        value={peso}
-                        placeholder='Digite seu peso'
+                        onChangeText={(masked, unmasked) => setValor(masked)}
+                        value={valor}
+                        placeholder='Digite o valor'
                         keyboardType='numeric'
                 />
                     <MaskInput
-                    mask={[/\d/, '.', /\d/,/\d/]}
+                    mask={[/\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
                     style={styles.textInput}
-                    onChangeText={(masked, unmasked) => setAltura(masked)}
-                    value={altura}
-                    placeholder='Digite sua altura'
+                    onChangeText={(masked, unmasked) => setTaxa(masked)}
+                    value={taxa}
+                    placeholder='Digite a taxa de juros'
                     keyboardType='numeric'
                     />
 
                     <TouchableOpacity
                     style={styles.button}
-                    onPress={calcIMC}
+                    onPress={calcJuros}
                     >
                         <Text>Calcular</Text>
                     </TouchableOpacity>
-                    <Text>Seu IMC é: {imc}</Text>
+                    <Text>O total após o juros é: {juros}</Text>
                 </View>
             </View>
             </>

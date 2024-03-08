@@ -61,7 +61,6 @@ criar.addEventListener('submit', async function (e) {
 //Atualizar um produto
 async function update(btn) {
     let linha = btn.parentNode.parentNode;
-
     let celulas = linha.cells;
     let id = celulas[0].innerHTML;
     let data = {
