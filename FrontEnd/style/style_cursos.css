@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/palco-fundo.jpg');
+    background-size: cover;
+}
+
+header{
+    height: 15vh;
+}
+
+main > h1 {
+    color: #FFD700;
+}
+
+main{
+    height: 85vh;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-img-top{
+    height: 182px;
+    width: 100%;
+}
+
+.card-text{
+    height: 275px;
+}

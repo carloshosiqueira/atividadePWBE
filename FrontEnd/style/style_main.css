@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/palco-fundo.jpg');
+    background-size: cover;
+}
+
+header{
+    height: 15vh;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao{
+    height: 50%;
+    width: 90%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.apresentacao > a{
+    align-self:last baseline;
+}
+
+.apresentacao > a > button{
+    border:none;
+    border-radius: 20px;
+    padding:10px;
+    background-color: #FFD700;
+}
+
+.apresentacao > a > button:hover{
+    background-color: rgb(255, 180, 0);
+}

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/palco-fundo.jpg');
+    background-size: cover;
+}
+
+main{
+    height: 85vh;
+}
+
+header{
+    height: 15vh;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form{
+    width: 60%;
+}
+
+label{
+    color:white;
+    margin: 5px 0 5px 0;
+}
