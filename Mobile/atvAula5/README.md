@@ -38,10 +38,12 @@ Caso o código acima não funcione tente utilizar
 ```
 
 2. Quando o projeto abrir, ele deverá aparacer na tela para fazer login, onde os existentes são:
+| Usuário | Senha |
+| ------- | ----- |
+| pessoa1 | 123   |
+| pessoa2 | 456   |
+| pessoa3 | 789   |
 
-pessoa1 | 123
-pessoa2 | 456
-pessoa3 | 789
 
 -- Colocar a imagem da tela de login aqui assim que possivel
 

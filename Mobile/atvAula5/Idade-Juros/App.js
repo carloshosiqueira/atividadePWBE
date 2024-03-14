@@ -2,6 +2,7 @@
 //import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import ScreenIdade from './componentes/FormIdade';
 import ScreenJuros from './componentes/FormJuros';
 import BemVindo from './componentes/BemVindo';
